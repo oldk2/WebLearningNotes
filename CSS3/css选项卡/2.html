@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选项卡</title>
+<style type="text/css">
+	/*定义选项卡大小*/
+	.tabs{
+		width:500px;
+		margin-left:auto;/*居中*/
+		margin-right:auto;/*居中*/
+		border-radius:10px 10px 10px 10px;
+		background-color:#f2f4f3;
+		
+	}
+	/*定义li 显示：块元素*/
+	.tabs ul>li{
+  display: block;
+	}
+
+	/*去除单选*/
+	.tabs ul>li input[type="radio"]{
+		position:absolute;
+		top:-9999px;
+		left:-9999px;
+	}
+
+	/*定义label 相对定位*/
+	.tabs ul>li label{
+		width: auto;
+		height:22px;
+		background-color:#898989;
+		position: relative;
+		padding: 6px;
+	}
+	/*定义内容块元素,绝对定位，显示为空*/
+	.tabs ul>li .tab-content{
+		position: absolute;
+		top: 50px;
+		display: none;
+		background-color:#525252;
+		width:500px;
+		border-radius:0px 0px 10px 10px;
+		padding:10px;
+		color:#FFF;
+	}
+	/*调整当选按钮和label*/
+	.tabs ul>li input[type="radio"]+label{
+		float:left;
+		margin-right: 0px;
+	}
+	/*定义单选被单击*/
+.tabs ul>li input[id^="tab"]:checked + label {
+  top: 0;
+  background: #525252;
+  padding:6px;
+  color:#FFF;
+}
+	/*定义单选单击后，显示的内容块*/
+.tabs ul>li input[id^="tab"]:checked ~[id^="tab-content"]{
+		display: block;
+		box-shadow:0px 5px 0px 0px #7a7a7a;
+}
+</style>
+
+</head>
+<body>
+	<div class="tabs">
+	<ul>
+		<li>
+			<input type="radio" name="tab" value="sss" id="tab1" checked></input>
+			<label for="tab1">选项卡</label>
+				<div id="tab-content1" class="tab-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					</p>
+				</div>
+		</li>
+
+		<li>
+			<input type="radio" name="tab" value="sss" id="tab2"></input>
+			<label for="tab2">选项卡</label>
+			<div id="tab-content2" class="tab-content">
+					<p>
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+		</li>
+
+
+		<li>
+			<input type="radio" name="tab" value="sss" id="tab3"></input>
+			<label for="tab3">选项卡</label>
+			<div id="tab-content3" class="tab-content">
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

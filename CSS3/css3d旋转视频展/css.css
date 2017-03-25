@@ -1,0 +1,96 @@
+/*初始化*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/**/
+body{
+
+}
+h1{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.contain{
+    width:1150px;
+    height:300px;
+    margin:0px auto;
+    padding:0px auto;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top:3%;
+}
+
+.wrapp{
+    width:315px;
+    height:100px;
+    margin-right: 40px;
+    transform-style:preserve-3d;
+    perspective: 200;
+    transition: all .6s ;
+
+}
+.item{
+    /*transform-style:preserve-3d;
+    perspective: 200;*/
+
+}
+
+/*设置图片*/
+.item img{
+    width: 315px;
+    height: 100px;
+    box-shadow:0px 5px 10px 0px rgba(46, 46, 46, 0.89);
+
+    transform: rotateX(0deg)translateZ(50px);
+    /*display: none;*/
+}
+
+/*设置文本*/
+.info{
+    width: 295px;
+    height: 80px;
+    display: block;
+    background: linear-gradient(to bottom, rgba(235,232,235,1) 0%, rgba(209,209,209,1) 49%, rgba(219,219,219,1) 100%);
+    font-size: 13px;
+    padding: 10px;
+    box-shadow:0px 5px 10px 1px rgba(46, 46, 46, 0.89);
+    /*变形*/
+    transform: rotateX(-90deg)translateZ(50px);
+}
+.info strong{
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: .2em 0 .5em 0;
+}
+/*鼠标经过效果*/
+.wrapp:hover{
+    transform: rotateX(90deg) translateZ(-2px);
+}
+.item img,.info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #caidan{
+            width:90px;
+            heigth:auto;
+            background-color: #22AFE2;
+            display: none; /*block*/
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        #caidan li{
+            list-style: none;
+            margin:0;
+            border:0;
+        }
+
+        #rl li{
+            border:solid #241244;
+        }
+    </style>
+</head>
+<body>
+<ul id="rl">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+<div id="caidan">
+    <ul >
+        <li><a href="1">查看</a></li>
+        <li><a href="2">刷新</a></li>
+        <li><a href="3">删除</a></li>
+    </ul>
+</div>
+   <script>
+       window.onload=function(){
+           var rl=document.getElementById('rl');
+           var caidan=document.getElementById('caidan');
+           var body=document.body;
+            //右键显示菜单
+           rl.addEventListener('contextmenu',function(e){
+               window.event.returnValue=false;
+               caidan.style.display="block";
+               caidan.style.top=e.clientY+'px';
+               caidan.style.left=e.clientX+'px';
+           });
+           //鼠标移出caidan 则隐藏菜单
+           caidan.addEventListener('mouseleave',function(e){
+                   caidan.style.display="none";
+            });
+
+
+       }
+
+
+   </script>
+
+
+</body>
+</html>

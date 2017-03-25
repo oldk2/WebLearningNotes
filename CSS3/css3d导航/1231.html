@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+    .nav{
+        width: 100%;
+        height:30px;
+    }
+    .nav-menu{
+        list-style: none;
+    }
+    .nav-menu li{
+        float: left;
+        display: block;
+    }
+
+    .boxs{
+        text-decoration:none;
+        display: block;
+         color: #fff;
+         -webkit-transition: all .08s ease-out linear;
+                 transition: all .08s ease-out linear;
+         -webkit-perspective: 250;
+                 perspective: 250;
+         -webkit-transform-style:preserve-3d;
+                 transform-style:preserve-3d;
+        	font-size: 20px;
+        	padding: 15px 30px 15px 31px;
+
+    }
+    .dian{
+        background-color: rgb(215, 103, 103);
+    }
+
+    .boxs:not(.dian):hover .three-d-box,
+    .boxs:not(.dian):focus .three-d-box{
+-wekbit-transform: translateZ(-25px) rotateX(90deg);
+ -moz-transform: translateZ(-25px) rotateX(90deg);
+ -o-transform: translateZ(-25px) rotateX(90deg);
+ -ms-transform: translateZ(-25px) rotateX(90deg);
+ transform: translateZ(-25px) rotateX(90deg);
+
+    }
+/*动画*/
+    .three-d-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        -webkit-transform-style:preserve-3d;
+                transform-style:preserve-3d;
+        transition: all .4s ease-out;
+        transform: translatez(-25px);
+        pointer-events: none;
+    }
+/*变形*/
+.front,.back{
+background-color: rgb(245, 145, 37);
+    padding: 15px 30px 15px 31px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-pointer-events: none;
+          -moz-pointer-events: none;
+          -ms-pointer-events: none;
+          -o-pointer-events: none;
+          pointer-events: none;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+a:hover .front,a:hover .back{
+    background-color: rgb(79, 105, 52);
+}
+.front{
+    -webkit-transform: rotateX(0deg) translateZ(25px);
+    transform: rotateX(0deg) translateZ(25px);
+}
+.back{
+
+    /*-webkit-transform: rotateX(-90deg) translateZ(25px) ;*/
+    transform:rotateX(-90deg) translateZ(25px);
+
+}
+
+.nav-z{
+    position: relative;
+    top:0;
+    left:-40px;
+    transition:all 0.3s ease-out;
+      transform-origin: 0px 0px;
+      transform: rotateX(-90deg);
+      backface-visibility: hidden;
+}
+.nav-menu li:hover ul{
+    transform: rotateX(0deg);
+}
+.nav-z li{
+    clear:left;
+    width: 100%;
+}
+.nav-menu li:hover li{
+    transform: rotateX(0deg);
+}
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul class="nav-menu chlearfix unstyled">
+        <li>
+            <a href="#" class="boxs dian">
+            首页
+                <samp class="three-d-box">
+                    <samp class="front">首页</samp>
+                    <samp class="back">首页</samp>
+                </samp>
+            </a>
+        </li>
+        <li>
+            <a href="#2" class="boxs ">
+foot
+                <samp class="three-d-box">
+                    <samp class="front">foot</samp>
+                    <samp class="back">foot</samp>
+                </samp>
+            </a>
+        </li>
+
+        <li>
+            <a href="#2" class="boxs ">
+啊实打实的
+                <samp class="three-d-box">
+                    <samp class="front">啊实打实的</samp>
+                    <samp class="back">啊实打实的</samp>
+                </samp>
+            </a>
+            <ul class="nav-z">
+						<li><a href="#" class="boxs">
+								Html5
+								<span class="three-d-box"><span class="front">Html5</span><span class="back">Html5</span></span>
+							</a></li>
+							<li><a href="#" class="boxs">
+								Css3
+								<span class="three-d-box"><span class="front">Css3</span><span class="back">Css3</span></span>
+							</a></li>
+							<li><a href="#" class="boxs">
+								JavaScript
+								<span class="three-d-box"><span class="front">JavaScript</span><span class="back">JavaScript</span></span>
+							</a></li>
+							<li><a href="#" class="boxs">
+								Videogames
+								<span class="three-d-box"><span class="front">Videogames</span><span class="back">Videogames</span></span>
+							</a></li>
+					</ul>
+        </li>
+
+    </ul>
+
+</div>
+</body>
+</html>

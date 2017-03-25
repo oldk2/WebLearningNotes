@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #s{
+        background-color: #88D332;
+        width: 50px;
+        height: 50px;
+    }
+        #w{
+            position: fixed;
+            left:95%;
+            top:80%;
+            display: none;
+        }
+
+    </style>
+</head>
+<div id="w">
+    <div id="s">^</div>
+</div>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+<p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>
+
+<body>
+
+   <script>
+       window.onscroll=function(){
+           var a = document.body;
+           var w=document.getElementById('w');
+           if(a.scrollTop>500){
+               w.style.display="block";
+           }else{
+               w.style.display="none";
+           }
+               var d=document.getElementById('w');
+               d.addEventListener('click',function(e){
+                   a.scrollTop=0;
+               });
+
+       }
+
+
+   </script>
+
+
+</body>
+</html>
